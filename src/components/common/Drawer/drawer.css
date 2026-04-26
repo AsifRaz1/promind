@@ -1,0 +1,121 @@
+/* Generic Drawer Styles - Theme-agnostic */
+
+/* Overlay */
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1100;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Drawer Container */
+.drawer {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  padding: 2rem;
+  z-index: 1200;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Right Drawer */
+.drawer-right {
+  right: 0;
+  transform: translateX(100%);
+}
+
+.drawer-right.open {
+  transform: translateX(0);
+}
+
+/* Left Drawer */
+.drawer-left {
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.drawer-left.open {
+  transform: translateX(0);
+}
+
+/* Close Button */
+.drawer-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.drawer-close:hover {
+  opacity: 0.7;
+}
+
+/* Drawer Content */
+.drawer-content {
+  margin-top: 3.5rem;
+  height: calc(100% - 3.5rem);
+}
+
+/* Scrollbar */
+.drawer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.drawer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.drawer::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.drawer::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .drawer {
+    padding: 1.5rem;
+  }
+
+  .drawer-close {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .drawer-content {
+    margin-top: 3rem;
+    height: calc(100% - 3rem);
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .drawer,
+  .drawer-overlay {
+    animation: none;
+    transition: none;
+  }
+}
