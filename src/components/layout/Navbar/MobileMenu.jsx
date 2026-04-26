@@ -2,47 +2,27 @@
 
 // Mobile Menu Component
 
-import { useEffect } from 'react';
-import { Icon } from '@/icons';
+import Drawer from '@/components/common/Drawer';
 import NavMenu from './NavMenu';
 import NavCTA from './NavCTA';
 
 export default function MobileMenu({ isOpen, onClose }) {
-  // Prevent body scroll when mobile menu is open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [isOpen]);
-
-  if (!isOpen) return null;
-
   return (
-    <>
-      {/* Overlay */}
-      <div className="mobile-menu-overlay" onClick={onClose}></div>
-
-      {/* Mobile Menu */}
-      <div className={`mobile-menu ${isOpen ? 'open' : ''}`}>
-        {/* Close Button */}
-        <button className="mobile-menu-close" onClick={onClose} aria-label="Close menu">
-          <Icon name="close" size={24} />
-        </button>
-
-        {/* Menu Items */}
-        <div className="mobile-menu-content">
-          <NavMenu onLinkClick={onClose} />
-          <div className="mobile-menu-cta">
-            <NavCTA />
-          </div>
+    <Drawer
+      isOpen={isOpen}
+      onClose={onClose}
+      position="right"
+      width="100%"
+      showCloseButton={true}
+      closeOnOverlayClick={true}
+    >
+      {/* Menu Items */}
+      <div className="mobile-menu-content">
+        <NavMenu onLinkClick={onClose} />
+        <div className="mobile-menu-cta">
+          <NavCTA />
         </div>
       </div>
-    </>
+    </Drawer>
   );
 }

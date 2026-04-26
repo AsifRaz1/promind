@@ -8,7 +8,9 @@
   width: 100%;
   padding: 1rem 1.5rem;
   transition: all 0.3s ease;
-  z-index: 1000;
+  z-index: 1300;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
 }
 
 .navbar.scrolled {
@@ -179,86 +181,33 @@
   opacity: 0.7;
 }
 
-/* Mobile Menu */
-.mobile-menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1100;
-  animation: fadeIn 0.3s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 85%;
-  max-width: 400px;
-  height: 100%;
-  padding: 2rem;
-  z-index: 1200;
-  overflow-y: auto;
-  transition: right 0.3s ease;
-  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
-}
-
-.mobile-menu.open {
-  right: 0;
-}
-
-.mobile-menu-close {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
-  transition: opacity 0.3s ease;
-}
-
-.mobile-menu-close:hover {
-  opacity: 0.7;
-}
-
+/* Mobile Menu Content Styles */
 .mobile-menu-content {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin-top: 4rem;
 }
 
-.mobile-menu .nav-menu {
+.mobile-menu-content .nav-menu {
   flex-direction: column;
   align-items: flex-start;
   gap: 0;
 }
 
-.mobile-menu .nav-item {
+.mobile-menu-content .nav-item {
   width: 100%;
   border-bottom: 1px solid;
   border-opacity: 0.1;
 }
 
-.mobile-menu .nav-link {
+.mobile-menu-content .nav-link {
   width: 100%;
   padding: 1rem 0;
   font-size: 1rem;
+  color: inherit;
 }
 
-.mobile-menu .nav-dropdown {
+.mobile-menu-content .nav-dropdown {
   position: static;
   box-shadow: none;
   margin-top: 0;
@@ -266,7 +215,7 @@
   animation: none;
 }
 
-.mobile-menu .nav-dropdown-link {
+.mobile-menu-content .nav-dropdown-link {
   padding: 0.625rem 1rem;
   font-size: 0.9rem;
 }
@@ -294,13 +243,7 @@
   }
 }
 
-/* Desktop */
-@media (min-width: 1025px) {
-  .mobile-menu,
-  .mobile-menu-overlay {
-    display: none !important;
-  }
-}
+
 
 /* Small mobile */
 @media (max-width: 480px) {
@@ -310,9 +253,5 @@
 
   .navbar.scrolled {
     padding: 0.75rem 1rem;
-  }
-
-  .mobile-menu {
-    width: 90%;
   }
 }
