@@ -3,7 +3,7 @@
 
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaYoutube, FaGithub } from 'react-icons/fa';
 import { MdEmail, MdPhone, MdLocationOn } from 'react-icons/md';
-import { FiArrowRight, FiArrowLeft } from 'react-icons/fi';
+import { FiArrowRight, FiArrowLeft, FiArrowUp } from 'react-icons/fi';
 import { HiMenu, HiX } from 'react-icons/hi';
 import { BiSearch } from 'react-icons/bi';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
@@ -28,6 +28,7 @@ const ICONS = {
   // Arrows
   arrowRight: FiArrowRight,
   arrowLeft: FiArrowLeft,
+  arrowUp: FiArrowUp,
   chevronDown: IoChevronDown,
 
   // Menu

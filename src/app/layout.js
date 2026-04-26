@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import FloatingChat from "@/components/common/ContactForm";
+import ScrollToTop from "@/components/common/ScrollToTop";
 import { buildSeo } from "@/utils/seo";
 
 const geistSans = Geist({
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         {/* <FloatingChat /> */}
+        <ScrollToTop />
       </body>
     </html>
   );

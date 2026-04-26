@@ -31,6 +31,12 @@ export default function NavMenuItem({ item, onLinkClick }) {
     }
   };
 
+  const toggleDropdown = () => {
+    if (item.hasDropdown) {
+      setIsDropdownOpen(!isDropdownOpen);
+    }
+  };
+
   if (item.hasDropdown) {
     return (
       <li
@@ -38,7 +44,10 @@ export default function NavMenuItem({ item, onLinkClick }) {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <button className={`nav-link ${isActive ? 'active' : ''}`}>
+        <button
+          className={`nav-link ${isActive ? 'active' : ''}`}
+          onClick={toggleDropdown}
+        >
           {item.label}
           <Icon name="chevronDown" size={14} className="dropdown-icon" />
         </button>

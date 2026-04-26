@@ -9,9 +9,10 @@
   padding: 1rem 1.5rem;
   transition: all 0.3s ease;
   z-index: 1300;
-  background: rgba(0, 0, 0, 0.95);
-  backdrop-filter: blur(15px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: #f2f2f2;
+  color: #000000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .navbar.scrolled {
@@ -34,15 +35,12 @@
   align-items: center;
   flex-shrink: 0;
   transition: opacity 0.3s ease;
-  max-height: 40px;
-  width: auto;
 }
 
-.nav-logo img {
-  max-height: 40px;
-  width: auto !important;
-  height: auto !important;
-  object-fit: contain;
+.nav-logo-image {
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  object-fit: cover;
 }
 
 .nav-logo:hover {
@@ -83,6 +81,7 @@
   cursor: pointer;
   background: none;
   border: none;
+  color: #000000;
 }
 
 .nav-link:hover {
@@ -126,10 +125,10 @@
   margin-top: 0.5rem;
   list-style: none;
   border-radius: 8px;
-  background: rgba(0, 0, 0, 0.98);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   opacity: 0;
   animation: fadeInDown 0.3s ease forwards;
   z-index: 1400;
@@ -156,10 +155,12 @@
   font-size: 0.9rem;
   text-decoration: none;
   transition: all 0.2s ease;
+  color: #000000 !important;
 }
 
 .nav-dropdown-link:hover {
   padding-left: 1.5rem;
+  background: rgba(0, 0, 0, 0.05);
 }
 
 /* CTA Button */

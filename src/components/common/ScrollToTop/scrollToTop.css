@@ -1,0 +1,106 @@
+/* Scroll to Top Button Styles */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  background: #ffffff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top:active {
+  transform: translateY(-2px);
+}
+
+/* SVG Progress Ring */
+.scroll-progress-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+  pointer-events: none;
+}
+
+.scroll-progress-ring-bg {
+  fill: none;
+  stroke: #e0e0e0;
+}
+
+.scroll-progress-ring-progress {
+  fill: none;
+  stroke: #1a1a1a;
+  transition: stroke-dashoffset 0.1s linear;
+  stroke-linecap: round;
+}
+
+/* Arrow Icon */
+.scroll-icon {
+  color: #1a1a1a;
+  z-index: 1;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Positioning - Center vertically on the bottom */
+@media (max-width: 768px) {
+  .scroll-to-top {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1.5rem;
+  }
+
+  .scroll-to-top:hover {
+    transform: translateX(-50%) translateY(-4px);
+  }
+
+  .scroll-to-top:active {
+    transform: translateX(-50%) translateY(-2px);
+  }
+}
+
+/* Tablet and small desktop */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .scroll-to-top {
+    right: 1.5rem;
+    bottom: 1.5rem;
+  }
+}
+
+/* Large desktop - position after chatbot (right side) */
+@media (min-width: 1025px) {
+  .scroll-to-top {
+    right: 2rem;
+    bottom: 2rem;
+  }
+
+  /* When chatbot is present, position scroll button above it */
+  /* Assuming chatbot will be at bottom: 2rem, this will be at bottom: 6rem (2rem + 4rem spacing) */
+  /* Adjust when you uncomment the chatbot */
+}
