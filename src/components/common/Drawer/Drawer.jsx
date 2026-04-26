@@ -2,8 +2,9 @@
 
 // Generic Reusable Drawer Component
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { Icon } from '@/icons';
+import { useClickOutside } from '@/hooks/useClickOutside';
 import './drawer.css';
 
 export default function Drawer({
@@ -15,6 +16,11 @@ export default function Drawer({
   showCloseButton = true,
   closeOnOverlayClick = true,
 }) {
+  const drawerRef = useRef(null);
+
+  // Close on click outside
+  useClickOutside(drawerRef, onClose, isOpen && closeOnOverlayClick);
+
   // Prevent body scroll when drawer is open
   useEffect(() => {
     if (isOpen) {
@@ -39,7 +45,7 @@ export default function Drawer({
       />
 
       {/* Drawer */}
-      <div className={`drawer drawer-${position} ${isOpen ? 'open' : ''}`} style={{ width }}>
+      <div ref={drawerRef} className={`drawer drawer-${position} ${isOpen ? 'open' : ''}`} style={{ width }}>
         {/* Close Button */}
         {showCloseButton && (
           <button
