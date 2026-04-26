@@ -1,0 +1,277 @@
+/* About Page Styles - Theme-agnostic */
+
+/* About Hero */
+.about-hero {
+  width: 100%;
+  padding: 8rem 1.5rem 5rem;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(147, 51, 234, 0.05) 100%);
+}
+
+.about-hero-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 1.5rem;
+}
+
+.about-hero-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin: 0 0 1rem;
+}
+
+.about-hero-description {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* About Section Base */
+.about-section {
+  width: 100%;
+  padding: 5rem 1.5rem;
+}
+
+.about-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.about-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.about-tagline {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+}
+
+.about-description {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Our Story */
+.our-story-section {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.story-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.story-paragraph {
+  font-size: 1.0625rem;
+  line-height: 1.9;
+  opacity: 0.85;
+  margin: 0 0 1.5rem;
+}
+
+.story-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* Mission & Vision */
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mission-vision-card {
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  border: 2px solid;
+  border-opacity: 0.1;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.mission-vision-card:hover {
+  border-opacity: 0.3;
+  transform: translateY(-5px);
+}
+
+.mission-vision-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+}
+
+.mission-vision-description {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  opacity: 0.85;
+  margin: 0;
+}
+
+/* Our Values */
+.values-section {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.value-card {
+  padding: 2rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+.value-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.1);
+  color: rgb(59, 130, 246);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.value-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+}
+
+.value-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* Responsive Design */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .about-hero {
+    padding: 7rem 1.5rem 4rem;
+  }
+
+  .about-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .about-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .mission-vision-grid {
+    gap: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 6rem 1rem 3rem;
+  }
+
+  .about-hero-title {
+    font-size: 2rem;
+  }
+
+  .about-hero-subtitle {
+    font-size: 1.125rem;
+  }
+
+  .about-hero-description {
+    font-size: 1rem;
+  }
+
+  .about-section {
+    padding: 3rem 1rem;
+  }
+
+  .about-title {
+    font-size: 1.75rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+
+  .mission-vision-grid,
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .mission-vision-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .about-hero {
+    padding: 5rem 1rem 2.5rem;
+  }
+
+  .about-hero-title {
+    font-size: 1.75rem;
+  }
+
+  .about-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .about-title {
+    font-size: 1.5rem;
+  }
+
+  .story-paragraph {
+    font-size: 1rem;
+  }
+
+  .value-card {
+    padding: 1.5rem;
+  }
+}
