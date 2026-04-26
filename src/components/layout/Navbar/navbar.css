@@ -227,11 +227,15 @@
   margin-top: 0;
   padding: 0 0 0.5rem 1rem;
   animation: none;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+  border: none;
 }
 
 .mobile-menu-content .nav-dropdown-link {
   padding: 0.625rem 1rem;
   font-size: 0.9rem;
+  color: #000000;
 }
 
 .mobile-menu-cta {

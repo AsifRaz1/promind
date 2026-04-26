@@ -30,7 +30,9 @@
   z-index: 1200;
   overflow-y: auto;
   transition: transform 0.3s ease;
-  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  color: #000000;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Right Drawer */
@@ -58,16 +60,21 @@
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
-  background: none;
+  background: rgba(0, 0, 0, 0.05);
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  transition: opacity 0.3s ease;
+  border-radius: 6px;
+  transition: all 0.3s ease;
   z-index: 10;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .drawer-close:hover {
-  opacity: 0.7;
+  background: rgba(0, 0, 0, 0.1);
 }
 
 /* Drawer Content */
