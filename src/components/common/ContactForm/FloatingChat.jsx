@@ -56,7 +56,7 @@ export default function FloatingChat() {
 
           {/* Chat Window */}
           <div className="floating-chat-window">
-            <ContactForm onClose={closeChat} showTitle={true} />
+            {/* <ContactForm onClose={closeChat} showTitle={true} /> */}
           </div>
         </>
       )}

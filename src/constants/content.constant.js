@@ -1,5 +1,5 @@
 // Main Content Section Constants
-
+import { BRAND } from './global.constant';
 // Overview Section
 export const OVERVIEW_SECTION = {
   tagline: 'Who We Are',
@@ -31,7 +31,7 @@ export const OVERVIEW_SECTION = {
 
 // Why Choose Us Section
 export const WHY_CHOOSE_US = {
-  tagline: 'Why Choose Promind',
+  tagline: `Why Choose ${BRAND.NAME}?`,
   title: 'What Sets Us Apart',
   description: 'We combine deep industry knowledge with innovative thinking to deliver solutions that drive real business impact.',
   features: [

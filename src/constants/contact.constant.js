@@ -114,6 +114,7 @@ export const WHY_CONTACT = {
       description: 'We\'re with you every step of the way.',
     },
   ],
+}
 // Contact Form Constants
 
 // Contact Form Fields
