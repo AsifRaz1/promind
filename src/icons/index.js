@@ -8,6 +8,7 @@ import { HiMenu, HiX } from 'react-icons/hi';
 import { BiSearch } from 'react-icons/bi';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { IoChevronDown } from 'react-icons/io5';
+import { BsChatDots } from 'react-icons/bs';
 
 // Icon mapping object
 const ICONS = {
@@ -36,6 +37,7 @@ const ICONS = {
   // Other
   search: BiSearch,
   loading: AiOutlineLoading3Quarters,
+  chat: BsChatDots,
 };
 
 // Icon Component
