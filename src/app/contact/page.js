@@ -4,7 +4,7 @@
 import { buildSeo } from '@/utils/seo';
 // import { BRAND } from '@/constants/global.constant';
 // import '@/components/contact/contact.css';
-
+import { BRAND } from '@/constants/global.constant';
 // SEO Metadata
 export async function generateMetadata() {
   return buildSeo({
