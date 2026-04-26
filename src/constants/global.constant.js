@@ -9,8 +9,9 @@ export const BRAND = {
   LOGO_URL: 'https://media.gettyimages.com/id/1488105257/photo/chatbot-powered-by-ai-transforming-industries-and-customer-service-yellow-chatbot-icon-over.jpg?s=612x612&w=gi&k=20&c=4Rc2-iMifyRHNXcL9O2ro6NW7dd8che5nS3jtvW6sT8=',
   LOGO_ALT: 'Promind Consultancy Logo',
   FAVICON_URL: '/favicon.ico',
-  OG_IMAGE: '/images/og-image.png',
-  TWITTER_IMAGE: '/images/twitter-image.png',
+  //temporary image
+  OG_IMAGE: 'https://media.gettyimages.com/id/1488105257/photo/chatbot-powered-by-ai-transforming-industries-and-customer-service-yellow-chatbot-icon-over.jpg?s=612x612&w=gi&k=20&c=4Rc2-iMifyRHNXcL9O2ro6NW7dd8che5nS3jtvW6sT8=',
+  TWITTER_IMAGE: 'https://media.gettyimages.com/id/1488105257/photo/chatbot-powered-by-ai-transforming-industries-and-customer-service-yellow-chatbot-icon-over.jpg?s=612x612&w=gi&k=20&c=4Rc2-iMifyRHNXcL9O2ro6NW7dd8che5nS3jtvW6sT8=',
 };
 
 // Contact Information

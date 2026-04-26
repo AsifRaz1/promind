@@ -2,7 +2,7 @@
 
 // Generic Reusable Drawer Component
 
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { Icon } from '@/icons';
 import { useClickOutside } from '@/hooks/useClickOutside';
 import './drawer.css';
@@ -20,19 +20,6 @@ export default function Drawer({
 
   // Close on click outside
   useClickOutside(drawerRef, onClose, isOpen && closeOnOverlayClick);
-
-  // Prevent body scroll when drawer is open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [isOpen]);
 
   if (!isOpen) return null;
 

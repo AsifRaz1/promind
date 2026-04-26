@@ -13,7 +13,7 @@ export default function MobileMenu({ isOpen, onClose }) {
       onClose={onClose}
       position="right"
       width="100%"
-      showCloseButton={true}
+      showCloseButton={false}
       closeOnOverlayClick={true}
     >
       {/* Menu Items */}

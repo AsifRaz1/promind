@@ -110,6 +110,18 @@ export function buildSeo(config = {}) {
     description,
     keywords: pageKeywords,
     robots: robotsValue,
+    icons: {
+      icon: [
+        { url: '/favicon.svg', type: 'image/svg+xml' },
+        { url: '/favicon.ico', sizes: '32x32' },
+      ],
+      apple: [
+        { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+      ],
+      other: [
+        { rel: 'icon', type: 'image/png', sizes: '512x512', url: '/icon.png' },
+      ],
+    },
     openGraph: openGraphData,
     twitter: twitterData,
     alternates: {

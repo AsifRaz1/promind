@@ -50,7 +50,7 @@ export default function Navbar() {
           onClick={toggleMobileMenu}
           aria-label="Toggle menu"
         >
-          <Icon name="menu" size={24} />
+          <Icon name={isMobileMenuOpen ? "close" : "menu"} size={24} />
         </button>
 
         {/* Mobile Menu */}
