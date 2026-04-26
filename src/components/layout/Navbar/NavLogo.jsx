@@ -11,9 +11,10 @@ export default function NavLogo() {
       <Image
         src={BRAND.LOGO_URL}
         alt={BRAND.LOGO_ALT}
-        width={140}
-        height={45}
+        width={120}
+        height={40}
         priority
+        style={{ objectFit: 'contain', maxHeight: '40px', width: 'auto' }}
       />
     </Link>
   );
