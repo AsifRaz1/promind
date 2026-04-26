@@ -1,9 +1,9 @@
 // Contact Page
 
-import { ContactHero, ContactInfo, ContactForm } from '@/components/contact';
+// import { ContactHero, ContactInfo, ContactForm } from '@/components/contact';
 import { buildSeo } from '@/utils/seo';
-import { BRAND } from '@/constants/global.constant';
-import '@/components/contact/contact.css';
+// import { BRAND } from '@/constants/global.constant';
+// import '@/components/contact/contact.css';
 
 // SEO Metadata
 export async function generateMetadata() {
@@ -18,9 +18,9 @@ export async function generateMetadata() {
 export default function ContactPage() {
   return (
     <main>
-      <ContactHero />
+      {/* <ContactHero />
       <ContactInfo />
-      <ContactForm />
+      <ContactForm /> */}
     </main>
   );
 }
