@@ -14,14 +14,9 @@ export default function HeroSection() {
       {/* Main Content */}
       <div className="hero-container">
         <HeroContent />
-        
+
         {/* Stats */}
         <HeroStats />
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="hero-scroll-indicator">
-        <div className="scroll-arrow"></div>
       </div>
     </section>
   );

@@ -46,18 +46,20 @@ export default function NotFound() {
       {/* Buttons */}
       <div style={{
         display: 'flex',
-        gap: '1rem',
-        marginBottom: '3rem'
+        gap: '0.75rem',
+        marginBottom: '3rem',
+        flexWrap: 'wrap',
+        justifyContent: 'center'
       }}>
         <Link
           href={NAV_URLS.HOME}
           style={{
-            padding: '0.75rem 1.5rem',
+            padding: '0.625rem 1rem',
             background: '#1a1a1a',
             color: '#ffffff',
             textDecoration: 'none',
             borderRadius: '4px',
-            fontSize: '0.95rem'
+            fontSize: '0.9rem'
           }}
         >
           Back to Home
@@ -66,13 +68,13 @@ export default function NotFound() {
         <Link
           href={NAV_URLS.CONTACT}
           style={{
-            padding: '0.75rem 1.5rem',
+            padding: '0.625rem 1rem',
             background: 'transparent',
             color: '#1a1a1a',
             textDecoration: 'none',
             border: '1px solid #1a1a1a',
             borderRadius: '4px',
-            fontSize: '0.95rem'
+            fontSize: '0.9rem'
           }}
         >
           Contact Support
