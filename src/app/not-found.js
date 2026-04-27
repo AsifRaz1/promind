@@ -1,86 +1,114 @@
-
 import Link from 'next/link';
-import { Icon } from '@/icons';
-import { NOT_FOUND_MSG, NOT_FOUND_CTA_BUTTONS, NOT_FOUND_QUICK_LINKS } from '@/constants/error.constant';
-import '@/components/common/ErrorBoundary/errorBoundary.css';
+import { NOT_FOUND_MSG, NOT_FOUND_QUICK_LINKS } from '@/constants/error.constant';
+import { NAV_URLS } from '@/constants/global.constant';
 
 export default function NotFound() {
   return (
-    <div className="error-boundary-page">
-      <div className="error-boundary-content">
-        {/* 404 Icon/Number */}
-        <div style={{
-          fontSize: '8rem',
-          fontWeight: '900',
-          background: 'linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          marginBottom: '1rem',
-          lineHeight: '1'
+    <main style={{
+      minHeight: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '2rem',
+      textAlign: 'center'
+    }}>
+      {/* 404 */}
+      <h1 style={{
+        fontSize: '6rem',
+        fontWeight: '400',
+        color: '#888888',
+        margin: '0 0 1rem 0'
+      }}>
+        {NOT_FOUND_MSG.TITLE}
+      </h1>
+
+      {/* Page Not Found */}
+      <h2 style={{
+        fontSize: '1.5rem',
+        fontWeight: '400',
+        color: '#666666',
+        margin: '0 0 1rem 0'
+      }}>
+        {NOT_FOUND_MSG.HEADING}
+      </h2>
+
+      {/* Message */}
+      <p style={{
+        fontSize: '1rem',
+        color: '#999999',
+        margin: '0 0 2rem 0',
+        maxWidth: '500px'
+      }}>
+        {NOT_FOUND_MSG.MESSAGE}
+      </p>
+
+      {/* Buttons */}
+      <div style={{
+        display: 'flex',
+        gap: '1rem',
+        marginBottom: '3rem'
+      }}>
+        <Link
+          href={NAV_URLS.HOME}
+          style={{
+            padding: '0.75rem 1.5rem',
+            background: '#1a1a1a',
+            color: '#ffffff',
+            textDecoration: 'none',
+            borderRadius: '4px',
+            fontSize: '0.95rem'
+          }}
+        >
+          Back to Home
+        </Link>
+
+        <Link
+          href={NAV_URLS.CONTACT}
+          style={{
+            padding: '0.75rem 1.5rem',
+            background: 'transparent',
+            color: '#1a1a1a',
+            textDecoration: 'none',
+            border: '1px solid #1a1a1a',
+            borderRadius: '4px',
+            fontSize: '0.95rem'
+          }}
+        >
+          Contact Support
+        </Link>
+      </div>
+
+      {/* Quick Links */}
+      <div>
+        <p style={{
+          fontSize: '0.85rem',
+          color: '#999999',
+          margin: '0 0 0.75rem 0'
         }}>
-          {NOT_FOUND_MSG.TITLE}
-        </div>
-
-        {/* Title */}
-        <h1 className="error-boundary-title">{NOT_FOUND_MSG.HEADING}</h1>
-
-        {/* Message */}
-        <p className="error-boundary-message">
-          {NOT_FOUND_MSG.MESSAGE}
+          {NOT_FOUND_MSG.SUGGESTIONS_TITLE}
         </p>
-
-        {/* Action Buttons */}
-        <div className="error-boundary-actions">
-          {NOT_FOUND_CTA_BUTTONS.map((button) => (
+        <div style={{
+          display: 'flex',
+          gap: '1.5rem',
+          flexWrap: 'wrap',
+          justifyContent: 'center'
+        }}>
+          {NOT_FOUND_QUICK_LINKS.map((link) => (
             <Link
-              key={button.id}
-              href={button.href}
-              className={`error-boundary-btn error-boundary-btn-${button.variant}`}
+              key={link.id}
+              href={link.href}
+              style={{
+                color: '#666666',
+                textDecoration: 'underline',
+                fontSize: '0.9rem'
+              }}
             >
-              {button.icon && (
-                <Icon
-                  name={button.icon}
-                  size={button.iconSize}
-                  style={{ marginRight: '0.5rem' }}
-                />
-              )}
-              {button.label}
+              {link.label}
             </Link>
           ))}
         </div>
-
-        {/* Quick Links */}
-        <div style={{ marginTop: '3rem' }}>
-          <p style={{
-            fontSize: '0.9rem',
-            color: '#666666',
-            marginBottom: '1rem',
-            fontWeight: '600'
-          }}>
-            {NOT_FOUND_MSG.SUGGESTIONS_TITLE}
-          </p>
-          <div style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            gap: '1rem',
-            justifyContent: 'center'
-          }}>
-            {NOT_FOUND_QUICK_LINKS.map((link) => (
-              <Link
-                key={link.id}
-                href={link.href}
-                style={{
-                  color: '#1a1a1a',
-                  textDecoration: 'underline',
-                  fontSize: '0.95rem'
-                }}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        </div>
       </div>
-    </div>
+    </main>
   );
 }
