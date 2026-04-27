@@ -7,6 +7,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'media.gettyimages.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'i.pinimg.com',
+      },
     ],
     // domains: ['media.gettyimages.com'],
   },

@@ -49,7 +49,11 @@ export default function NavMenuItem({ item, onLinkClick }) {
           onClick={toggleDropdown}
         >
           {item.label}
-          <Icon name="chevronDown" size={14} className="dropdown-icon" />
+          <Icon
+            name={isDropdownOpen ? "chevronUp" : "chevronDown"}
+            size={14}
+            className="dropdown-icon"
+          />
         </button>
 
         {isDropdownOpen && (

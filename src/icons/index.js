@@ -7,7 +7,7 @@ import { FiArrowRight, FiArrowLeft, FiArrowUp } from 'react-icons/fi';
 import { HiMenu, HiX } from 'react-icons/hi';
 import { BiSearch } from 'react-icons/bi';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
-import { IoChevronDown } from 'react-icons/io5';
+import { IoChevronDown, IoChevronUp } from 'react-icons/io5';
 import { BsChatDots } from 'react-icons/bs';
 
 // Icon mapping object
@@ -30,6 +30,7 @@ const ICONS = {
   arrowLeft: FiArrowLeft,
   arrowUp: FiArrowUp,
   chevronDown: IoChevronDown,
+  chevronUp: IoChevronUp,
 
   // Menu
   menu: HiMenu,
