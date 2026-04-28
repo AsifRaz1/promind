@@ -15,7 +15,7 @@
 /* Three Column Section */
 .footer-three-columns {
   display: grid;
-  grid-template-columns: 2fr 1.5fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
   margin-bottom: 2rem;
 }
@@ -198,29 +198,26 @@
 
 .footer-social-links {
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .footer-social-link {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
   color: #ffffff;
   text-decoration: none;
   transition: all 0.3s ease;
-  opacity: 0.85;
-  font-size: 0.9rem;
-  padding: 0.5rem 0;
+  opacity: 0.8;
 }
 
 .footer-social-link:hover {
   opacity: 1;
-  transform: translateX(4px);
-}
-
-.social-label {
-  font-size: 0.9rem;
+  transform: translateY(-3px);
 }
 
 /* Footer Divider */
@@ -310,10 +307,6 @@
     font-size: 2rem;
   }
 
-  .footer-social-links {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
 }
 
 /* Mobile */

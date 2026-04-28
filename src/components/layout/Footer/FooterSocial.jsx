@@ -53,7 +53,6 @@ export default function FooterSocial() {
             aria-label={social.name}
           >
             <Icon name={social.icon} size={20} />
-            <span className="social-label">{social.name}</span>
           </Link>
         ))}
       </div>
