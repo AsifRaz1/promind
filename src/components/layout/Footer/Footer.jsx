@@ -3,6 +3,7 @@
 import FooterInfo from './FooterInfo';
 import FooterStats from './FooterStats';
 import FooterNewsletter from './FooterNewsletter';
+import FooterSocial from './FooterSocial';
 import FooterBottom from './FooterBottom';
 import './footer.css';
 
@@ -10,17 +11,27 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Top Section */}
-        <div className="footer-top">
+        {/* Stats at Top - Full Width */}
+        <FooterStats />
+
+        {/* Divider */}
+        <div className="footer-divider"></div>
+
+        {/* Three Column Section */}
+        <div className="footer-three-columns">
           {/* Left: Company Info */}
-          <div className="footer-column footer-column-info">
+          <div className="footer-column-left">
             <FooterInfo />
           </div>
 
-          {/* Right: Stats & Newsletter */}
-          <div className="footer-column footer-column-content">
-            <FooterStats />
+          {/* Middle: Newsletter */}
+          <div className="footer-column-middle">
             <FooterNewsletter />
+          </div>
+
+          {/* Right: Social Links */}
+          <div className="footer-column-right">
+            <FooterSocial />
           </div>
         </div>
 
